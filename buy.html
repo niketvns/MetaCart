@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceed | MetaCart</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            display: flex;
+            text-decoration: none;
+            margin: 10px 30px;
+            padding: 10px;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            border: 2px solid black;
+            background-color: rgb(0, 43, 100);
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .save {
+            height: 4vh;
+            width: 4vw;
+            background-color: brown;
+            color: aliceblue;
+        }
+
+        .form {
+            margin: 20px 100px 0px 50px;
+        }
+
+        .payment {
+            margin: 20px 50px 0px 100px;
+        }
+        #select{
+            height: 5vh;
+            width: 8vw;
+            background-color: rgb(127, 106, 245);
+            color: rgb(0, 0, 0);
+        }
+        #country{
+            text-align: center required;
+            height: 5vh;
+            width: 150px;
+            background-color: rgb(243, 119, 226);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Site Map</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>Enter Details for Delivery</h1>
+        </div>
+        <div class="main" style="display: flex;">
+            <div class="form">
+                <h3>Delivery Address:</h3>
+                <form action="address.php">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile:</td>
+                            <td><input type="mobile" name="mobile" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td><input type="address" name="address" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>District:</td>
+                            <td><input type="text" name="district" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>State:</td>
+                            <td><input type="text" name="state" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>Country:</td>
+                            <td>
+                                <select name="country" id="country" required>
+                                    <option value="">- Country -</option>
+                                    <option value="India">India</option>
+                                    <option value="UK">UK</option>
+                                    <option value="singapore">Singapore</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pin Code:</td>
+                            <td><input type="text" name="pin" id="" required></td>
+                        </tr>
+                        <tr>
+                            <td>Landmark:</td>
+                            <td><input type="text" name="landmark" id=""></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Save" class="save">
+                </form>
+            </div>
+            <div class="payment">
+                <h2>Payment Method</h2>
+                <p>Total Price for this Order: 45635 /-</p>
+                <form action="">
+                    <p>Please Choose One of the Payment option for Proceed</p>
+                    <select name="payment" id="select" onchange="myfunc()">
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Net Banking">Net Banking</option>
+                        <option value="UPI/Paytm">UPI/Paytm</option>
+                    </select>
+                    <!-- <input type="range" name="volume" value="30" id="range" onclick="myfunc()"> -->
+                    <h1 id="mypara"></h1>
+                    <input type="text" maxlength="14" name="cardno" id="cardno" placeholder="Card No / UPI" style="height: 40px; width: 300px; font-size: 20px;">
+                    <p id="cardno"></p>
+                    <!-- <form action="">
+                        <input type="text" name="cardno" id="cardno">
+                        <input type="text" name="name" id="name">
+                        <input type="password" name="cvv" id="cvv">
+                        <input type="date" name="expiry" id="expiry">
+                    </form> -->
+                    <script>
+                        function myfunc() {
+                            var x = document.getElementById("select").value;
+                            if(x==="Debit Card" || x==="Credit Card")
+                                return document.getElementById("mypara").innerHTML=x+" No.";
+                            else
+                                return document.getElementById("mypara").innerHTML=x+" ID";
+                            // if (x === "Debit Card") {
+                            //     // return document.getElementById("cardno").innerHTML=x;
+                            //     alert("hii");
+                            //     var y = document.createElement("INPUT");
+                            //     y.setAttribute("type", "password");
+                            //     y.innerHTML = document.getElementById('cardno').innerHTML;
+                            //     document.getElementById("cardno").appendChild(y);
+                            //     // document.body.appendChild(y);
+                            // }
+                        }
+                    </script>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

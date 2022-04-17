@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCart</title>
+    <link rel="stylesheet" href="metastyle.css">
+    <script>
+        function search()
+        {
+            var result=true;
+            var i=document.getElementsByTagName("input");
+            if(i[0].value.length==0){
+                result=false;
+                alert("Please write some Query");
+            }
+            return(result);
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="ashu">
+            <span class="text">
+                <i><b><span class="large">MetaCART</span></b></i><span class="small">Get Everything Here</span>
+            </span>
+            <span>
+                <form action="search.php" method="get" onsubmit="return search()">
+                    <input class="search" type="text" placeholder="Search Products">
+                    <input class="button" type="submit" value="Search">
+                </form>
+            </span>
+            <span class="cart">
+                <p class="carttext"><a href="cart.html" style="text-decoration: none;">Cart</a></p>
+            </span>
+            <span class="signin">
+                <p class="signin_text"><a class="signin_text" href="signin.html">Sign In</a></p>
+            </span>
+        </div>
+    </header>
+    <main style="height: 1000px;">
+        <br><br><br>
+        <h2><span class="categories">__Categories__ </span></h2>
+        <div class="categories1">
+            <div class="men">
+                <img src="men img.png" alt="">
+                <p id="mens">Mens</p>
+            </div>
+            <div class="women">
+                <img src="women img.png" alt="img">
+                <p id="womens">Womens</p>
+            </div>
+            <div class="kids">
+                <img src="kids img.png" alt="img">
+                <p id="kids">Kids</p>
+            </div>
+            <div class="home_appliances">
+                <img src="home_appliances.png" alt="img">
+                <p id="home_appliances">Home Appliances</p>
+            </div>
+            <div class="electronics">
+                <img src="electronics img.png" alt="img">
+                <p id="electronics">Electronics</p>
+            </div>
+            <div class="kitchen">
+                <img src="kitchen.png" alt="img">
+                <p id="kitchen">Kitchen</p>
+            </div>
+            <div class="essential">
+                <img src="essential.png" alt="img">
+                <p id="essential">Essential</p>
+            </div>
+
+        </div><br><br><br>
+        <h2><span class="today_best_offer">__Today's Best Offers__ </span></h2>
+        <div class="best_offers">
+            <div class="laptop">
+                <img class="image" src="laptop.jpg" alt="img">
+                <p class="price">RS. 56,990 /-</p>
+                <p class="product">Asus Tuff Gaming f15</p>
+                <hr>
+                <p id="details">8GB RAM DDR4 | 512 GB SSD | Windows 10 Home | MS Office | 4GB Graphics.....</p>
+            </div>
+            <div class="shoes">
+                <img class="image" src="shoes.jpg" alt="img">
+                <p class="price">RS. 899 /-</p>
+                <p class="product">SparX Running Shoes</p>
+                <hr>
+                <p id="details">Full elastic | Design for Runners....</p>
+            </div>
+            <div class="camera">
+                <img class="image" src="camera.jpg" alt="img">
+                <p class="price">RS. 16,990 /-</p>
+                <p class="product">Canon Camera</p>
+                <hr>
+                <p id="details">256 GB Memory | Expand upto 1024 GB.....</p>
+            </div>
+
+
+        </div>
+    </main>
+    <footer style="height: 20vh;">
+        <hr>
+        <h4 style="color: white;">
+            Office Address:
+            <pre>
+                N 12/306 X-2-H-M
+                Lakshamanpuran, Lakharao, Bazardiha Road 
+                Varanasi, Uttar Pradesh
+                India
+                221109</pre>
+        </h4>
+        <div class="fn">
+            <ul>
+                <li>About</li>
+                <li>Privacy Policy</li>
+                <li>Contact Us</li>
+                <li>Sitemap</li>
+                <li>Best Offers</li>
+                <li>Downlods</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

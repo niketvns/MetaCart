@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCart | get everything here</title>
+    <link rel="stylesheet" href="metacart2.css">
+    <script>
+        function search()
+        {
+            var result=true;
+            var i=document.getElementsByTagName("input");
+            if(i[0].value.length==0){
+                result=false;
+                alert("Please write some Query");
+            }
+            return(result);
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <input type="checkbox" name="sidebarcheckbox" id="">
+            <div class="sidebar">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">MetaPay</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+            <span class="titletext">
+                <i><b><span class="large">MetaCART</span></b></i><span class="smalltext">Get Everything Here</span>
+            </span>
+            <span>
+                <form action="search.php" method="get" onsubmit="return search()">
+                    <input class="search" type="text" placeholder="Search Products">
+                    <input class="searchbutton hover" type="submit" value="Search">
+                </form>
+            </span>
+            <a href="cart.html"" class="cart hover">
+                <span class="cart">
+                    <p class="carttext">Cart</p>
+                </span>
+            </a>
+            <a href="signin.html"" class="signin hover">
+                <span class="signin">
+                    <p class="signin_text">Sign In</p>
+                </span>
+            </a>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

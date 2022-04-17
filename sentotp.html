@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | MetaCart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(149, 149, 191);
+        }
+
+        div {
+            display: flexbox;
+        }
+
+        .title {
+            width: 36vw;
+            /* height: 90vh; */
+            /* border: 2px solid red; */
+            float: left;
+        }
+
+        p.title {
+            text-align: center;
+            justify-content: center;
+            margin-top: 30vh;
+            font-size: 7vw;
+            font-style: oblique;
+            color: brown;
+        }
+
+        .detail {
+            /* border: 2px solid green; */
+            background-color: blanchedalmond;
+            height: 80vh;
+            width: 60vw;
+            float: right;
+            /* margin-top: 20px;
+            margin-right: 20px;
+            border-radius: 40px; */
+            margin-top: -10px;
+            margin-right: 40px;
+            border-radius: 40px;
+        }
+
+        .input {
+            width: 15vw;
+            height: 4vh;
+        }
+
+        td {
+            font-size: 25px;
+        }
+
+        .button {
+            height: 5vh;
+            width: 10vw;
+            background-color: indigo;
+            color: ivory;
+            cursor: pointer;
+            font-size: large;
+            margin-left: 146px;
+        }
+
+        .button:hover {
+            background-color: rgb(150, 27, 238);
+            height: 5vh;
+            width: 10vw;
+            font-size: large;
+        }
+
+        table {
+            /* border: 2px solid black; */
+            width: 40vw;
+        }
+
+        td {
+            /* border: 2px solid black; */
+            padding: 10px;
+        }
+
+        form {
+            margin: 100px 200px 40px 200px;
+        }
+
+        input {
+            font-weight: 20;
+            font-size: large;
+        }
+
+        .address {
+            width: 20vw;
+            height: 6vh;
+            font-size: 15px;
+        }
+
+        .heading {
+            margin: 80px;
+        }
+
+        span {
+            color: red;
+        }
+
+        /* p.fp {
+            margin-left: 250px;
+            font-size: 25px;
+        } */
+
+        p.instruction {
+            margin-left: 100px;
+            font-size: 15px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            display: flex;
+            text-decoration: none;
+            margin: 10px 30px;
+            padding: 10px;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            border: 2px solid black;
+            background-color: rgb(0, 43, 100);
+            cursor: pointer;
+        }
+        li>a{
+            text-decoration: none;
+            color: white;
+        }
+        li:hover{
+            background-color: brown;
+            text-decoration: underline;
+        }
+
+        header {
+            width: 35vw;
+        }
+    </style>
+    <script>
+        function validate()
+        {
+            var result=false;
+            var x=document.getElementsByTagName("input")[0].value;
+            var y=document.getElementsByTagName("input")[1].value;
+            if(x===y)
+            {
+                result=true;
+                alert("Password Created Successfully");
+            }
+            if(result===false)
+                alert("Password is not same");
+            return(result);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="metacart.html">Home</a></li>
+                <li>About</li>
+                <li>Site Map</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="title">
+        <p class="title">MetaCart</p>
+    </div>
+    <div class="detail">
+        <div class="heading">
+            <H1>Create New Password</H1>
+            <p class="instruction"><span>*</span>Password Should contain atleast one uppercase, lowercase, number, special symbol etc.</p>
+        </div>
+        <form action="newpass.html" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>New Password<span>*</span>: </td>
+                    <td><input type="password" name="newpassword" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password<span>*</span> : </td>
+                    <td><input type="text" name="confirmpassword" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <td><pre> </pre></td>
+                </tr>
+                <script>
+                    function otp()
+                    {
+
+                    }
+                </script>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" class="button"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

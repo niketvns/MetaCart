@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 100px;
+    width: 1526px;
+    border: 4px solid #e4bdbd;
+    background-color: rgb(140, 231, 231);
+}
+.header{
+    display: flex;
+}
+.titletext{
+    font-size: 6vh;
+    color: brown;
+    margin: 30px 0 0 60px;
+}
+.smalltext{
+    font-size: 3vh;
+    color: rgb(8, 37, 99);
+}
+.search{
+    margin: 4vh 0 0 15vw;
+}
+input.search{
+    width: 300px;
+    height: 35px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 2px solid rgb(80, 80, 228);
+}
+.searchbutton{
+    height: 40px;
+    width: 100px;
+    background-color: brown;
+    color: aliceblue;
+    margin-left: -3px;
+    cursor: pointer;
+    border: 2px solid blueviolet;
+}
+.hover:hover{
+    background-color: rgb(10, 87, 150);
+}
+.cart{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    text-decoration: none;
+    margin: 3vh 0 0 6vw;
+}
+.carttext{
+    margin: -4px 6px;
+    color: wheat;
+    font-size: 20px;
+    font-style: italic;
+}
+.signin{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(46, 2, 33);
+    color: white;
+    text-decoration: none;
+    margin: 3vh 0 0 6vw;
+    font-style: italic;
+    border-radius: 36%;
+}
+.signin_text{
+    margin: -5px 20px;
+    color: wheat;
+    font-size: 20px;
+    font-weight: 100;
+}
+@media screen and (max-width: 1400px){
+    body{
+        background-color: red;
+    }
+}
+.sidebar{
+    height: 45vw;
+    width: 20vw;
+    background-color: blueviolet;
+    color: white;
+    transform: translateX(-265px);
+}
+li{
+    border: 2px solid white;
+    padding: 20px 30px;
+
+}
+li>a{
+    text-decoration: none;
+    color: white;
+}

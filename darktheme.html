@@ -1,0 +1,83 @@
+<html>
+<body>
+
+<h2 style="color:green">Create a checkbox and get its value</h2>
+<h3> Are you a web developer? </h3>
+Yes: <input type="checkbox" id="myCheck1" value="Yes, I'm a web developer">
+No: <input type="checkbox" id="myCheck2" value="No, I'm not a web developer">
+<br> <br>
+<button onclick="checkCheckbox()">Submit</button> <br>
+
+<div><h4 style="color:green" id="result"></h4></div>
+<h4 style="color:red" id="error"></h4>
+
+<script>
+function checkCheckbox() {
+  var yes = document.getElementById("myCheck1");
+  var no = document.getElementById("myCheck2");
+  if (yes.checked == true && no.checked == true){
+    return document.getElementById("error").innerHTML = "Please mark only one checkbox either Yes or No";
+  }
+  else if (yes.checked == true){
+    var y = document.getElementById("myCheck1").value;
+    return document.getElementById("result").innerHTML = y; 
+  } 
+  else if (no.checked == true){
+    var n = document.getElementById("myCheck2").value;
+    return document.getElementById("result").innerHTML = n;
+  }
+  else {
+    return document.getElementById("error").innerHTML = "*Please mark any of checkbox";
+  }
+}
+</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme</title>
+    <style>
+        .dt{
+            margin-left: 1300px;
+            height: 60px;
+            width: 130px;
+            background-color: aqua;
+            color: blueviolet;
+        }
+        body{
+            background-color: brown;
+        }
+    </style>
+    <script>
+        function darktheme()
+        {
+            document.getElementById("mm").style.backgroundColor = "blue";
+        }
+    </script>
+</head>
+
+<body id="mm">
+    <script>
+        function darktheme()
+        {
+            document.getElementById("mm").style.backgroundColor = "blue";
+        }
+        function revertdarktheme()
+        {
+            document.getElementById("mm").style.backgroundColor="red";
+        }
+    </script>
+    <form onmouseover="darktheme()" onmouseout="revertdarktheme()">
+        <input type="submit" value="Enable Dark Theme" id="dt" class="dt">
+    </form>
+    <p style="color: white;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium dignissimos deserunt odio vitae, obcaecati commodi modi. Repudiandae nulla debitis dignissimos! Doloremque neque nemo reiciendis maiores voluptatibus cupiditate illo soluta facere libero mollitia iste blanditiis, sed rem laboriosam. Reprehenderit sequi animi eos minima sunt. Officia atque consectetur, placeat pariatur explicabo aut. Mollitia vitae eaque repudiandae magni sit sapiente atque, dolorem perferendis quaerat consectetur minima eum, eos ullam, illum facere unde in enim dolor nulla nostrum. Voluptate aut quisquam temporibus libero ullam. Rem modi, sunt iusto adipisci nemo quae dolorem nulla reprehenderit. Maiores repudiandae ullam cupiditate magni facilis officiis, in quaerat esse reiciendis odio ipsum illum commodi, totam cumque? Earum pariatur delectus excepturi provident neque blanditiis! Commodi voluptates officia architecto totam soluta, odio fugiat exercitationem quaerat laudantium asperiores pariatur corrupti deserunt aperiam ratione. Necessitatibus voluptatem earum asperiores hic aut repudiandae eum sed, cupiditate iste ipsum? Delectus temporibus quo deserunt iure repellendus hic ipsum animi fuga, provident libero aliquam dicta incidunt a at, facere obcaecati, debitis iusto magni error distinctio unde magnam minus illum. Ullam nostrum, voluptatibus voluptates delectus at veniam facere ipsa ea nobis velit est earum debitis possimus. Harum nostrum aut at eaque reprehenderit sapiente earum natus dolorem voluptas ad quas magni perferendis sit incidunt aperiam ab praesentium, consequatur vero eos? Quos itaque sed ipsam obcaecati odio corporis a rem sint quasi, harum voluptatum cumque eaque dicta illum distinctio placeat voluptate repellendus soluta dolore quibusdam est vitae ad. Architecto molestiae dolorum vero assumenda illum deserunt, necessitatibus at asperiores praesentium, adipisci nemo repudiandae neque nobis omnis delectus soluta obcaecati! Molestiae culpa ad architecto ullam impedit amet unde, commodi similique dolorem voluptatem, porro autem sunt? Exercitationem sunt at, quod corporis repellat perferendis? Repudiandae soluta iste suscipit qui, voluptates ipsam dolores laudantium accusamus saepe fuga molestiae aliquam labore provident facere et temporibus aliquid? Dolor.</p>
+</body>
+
+</html> -->
